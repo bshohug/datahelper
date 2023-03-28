@@ -24,6 +24,7 @@
     />
     <!-- My own stylesheet -->
     <link href="style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <div
@@ -31,8 +32,9 @@
     >
       <div class="row">
         <header class="text-center col-12">
+          <img src="logo.png" alt="" />
           <h1 class="text-uppercase">
-            <strong>The biggest startup event of the year</strong>
+            We Provide <br /><span id="words">FAST</span> Services
           </h1>
         </header>
         <div class="buffer col-12"></div>
@@ -44,5 +46,18 @@
         </section>
       </div>
     </div>
+    <script type="text/javascript">
+      (function () {
+        var words = ["FAST", "ACCURATE", "RELIABLE"],
+          i = 0;
+        setInterval(function () {
+          $("#words").fadeOut(function () {
+            $(this)
+              .html(words[(i = (i + 1) % words.length)])
+              .fadeIn();
+          });
+        }, 3000);
+      })();
+    </script>
   </body>
 </html>
