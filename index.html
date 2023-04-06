@@ -48,10 +48,10 @@
     </div>
     <script type="text/javascript">
       (function () {
-        var words = ["FAST", "ACCURATE", "RELIABLE"],
+        var words = ['FAST', 'ACCURATE', 'RELIABLE'],
           i = 0;
         setInterval(function () {
-          $("#words").fadeOut(function () {
+          $('#words').fadeOut(function () {
             $(this)
               .html(words[(i = (i + 1) % words.length)])
               .fadeIn();
